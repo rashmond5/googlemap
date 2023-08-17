@@ -1,0 +1,76 @@
+  monospace;
+}
+
+.App {
+  position: relative;
+}
+
+:root {
+  --main-blue: #00253a;
+  --main-green: #2e933c;
+  2 changes: 0 additions & 2 deletions2  
+src/App.js
+@@ -2,7 +2,6 @@ import React from 'react'
+
+import IntroSection from './components/intro/Intro'
+import ContactSection from './components/contact-section/ContactSection'
+import MapSection from './components/map/Map'
+import DisclaimerSection from './components/disclaimer/Disclaimer'
+import FooterSection from './components/footer/Footer'
+
+@@ -13,7 +12,6 @@ function App() {
+    <div className="App">
+      <IntroSection />
+      <ContactSection />
+      <MapSection />
+      <DisclaimerSection />
+      <FooterSection />
+    </div>
+
+import './contact-section.css'
+
+const ContactSection = () => (
+  <div className="contact-section">
+    <Form />
+    <Info />
+  </div>
+  <>
+    <div className="contact-section">
+      <Form />
+      <Info />
+    </div>
+  </>
+)
+
+export default ContactSection
+ 
+src/components/contact-section/contact-section.css
+@@ -5,23 +5,20 @@
+
+@media screen and (min-width: 799px) {
+  .contact-section {
+    --offset-height: -100px;
+
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    width: 80vw;
+    height: 475px;
+    margin: 0 auto;
+    top: 250px;
+    top: var(--offset-height);
+    left: 50%;
+    margin-left: -40vw;
+    position: absolute;
+    margin-bottom: var(--offset-height);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (min-width: 999px) {
+  .contact-section {
+    top: 300px;
+  }
+}
